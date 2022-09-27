@@ -1,18 +1,15 @@
 #!/usr/bin/python3
-""" Module that contains a function that reads from a file """
+"""
+Module that has a function that
+writes a string to a text file (UTF8) and
+returns the number of characters written
+"""
 
 
-def read_file(filename=""):
-    """ Function that reads from a file
-
-    Args:
-        filename: filename
-
-    Raises
-        Exception: when the file can be opened
-
+def write_file(filename="", text=""):
     """
-
-    with open(filename, 'r', encoding="utf-8") as f:
-        read_data = f.read()
-        print(read_data, end='')
+    function that writes a string to a text file (UTF8) and returns the number
+    of characters written
+    """
+    with open(filename, encoding="utf-8", mode="w") as f:
+        return f.write(text)
